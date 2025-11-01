@@ -312,7 +312,7 @@ QListWidget {background-color: grey; color: white}</string>
       </rect>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="page">
       <property name="geometry">
@@ -358,6 +358,41 @@ QListWidget {background-color: grey; color: white}</string>
          <height>271</height>
         </rect>
        </property>
+       <item>
+        <property name="text">
+         <string>New Item</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>New Item</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>New Item</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>New Item</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>New Item</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>New Item</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>New Item</string>
+        </property>
+       </item>
       </widget>
      </widget>
      <widget class="QWidget" name="page_3">
@@ -598,17 +633,24 @@ QListWidget {background-color: grey; color: white}</string>
     </widget>
    </widget>
    <widget class="QWidget" name="Partition_page">
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>390</y>
-       <width>57</width>
-       <height>14</height>
+       <x>10</x>
+       <y>20</y>
+       <width>211</width>
+       <height>61</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>Set Partition</string>
      </property>
     </widget>
    </widget>
