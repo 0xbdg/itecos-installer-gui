@@ -8,7 +8,7 @@ import (
 
 func main() {
 	a := app.New()
-	window := a.NewWindow("")
+	window := a.NewWindow("Installer")
 	hello := widget.NewLabel("ITECOS-Installer!")
 	window.SetContent(container.NewVBox(
 		hello,
