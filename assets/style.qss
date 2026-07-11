@@ -1,5 +1,5 @@
 QWizard, QDialog { background-color: #1e1e2e; color: #cdd6f4; }
-QLabel, QCheckBox { color: #cdd6f4; font-size: 14px; }
+QLabel, QCheckBox { color: black; font-size: 14px; }
 QComboBox, QLineEdit { background-color: #11111b; color: #cdd6f4; border: 1px solid #45475a; padding: 6px; border-radius: 4px; }
 QComboBox::drop-down { border: none; }
 QRadioButton { font-size: 15px; font-weight: bold; color: #89b4fa; }

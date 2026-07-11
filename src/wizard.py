@@ -19,11 +19,11 @@ PAGE_SUMMARY = 6
 PAGE_INSTALL = 7
 
 class WizardInstaller(QWizard): 
-    def __init__(self, style_file):
+    def __init__(self, assets_folder):
         super().__init__()
         self.setWindowTitle("ITEC-OS Installer")
         self.setWizardStyle(QWizard.WizardStyle.AeroStyle)
-        self.setPage(PAGE_WELCOME, WelcomePage())
+        self.setPage(PAGE_WELCOME, WelcomePage(assets_folder=assets_folder))
         self.setPage(PAGE_LOCALE, LocalePage())
         self.setPage(PAGE_KEYBOARD, KeyboardPage())
         self.setPage(PAGE_USER, UserSetupPage())
@@ -34,5 +34,5 @@ class WizardInstaller(QWizard):
 
 
         self.resize(500,500)
-        self.setStyleSheet(open(style_file, "r").read())
+        self.setStyleSheet(open(assets_folder / "style.qss", "r").read())
 
