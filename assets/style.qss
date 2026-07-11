@@ -1,0 +1,14 @@
+QWizard, QDialog { background-color: #1e1e2e; color: #cdd6f4; }
+QLabel, QCheckBox { color: #cdd6f4; font-size: 14px; }
+QComboBox, QLineEdit { background-color: #11111b; color: #cdd6f4; border: 1px solid #45475a; padding: 6px; border-radius: 4px; }
+QComboBox::drop-down { border: none; }
+QRadioButton { font-size: 15px; font-weight: bold; color: #89b4fa; }
+QProgressBar { border: 2px solid #313244; border-radius: 5px; text-align: center; color: white; font-weight: bold; }
+QProgressBar::chunk { background-color: #a6e3a1; }
+QPushButton { background-color: #313244; color: #cdd6f4; padding: 8px 15px; border-radius: 4px; font-weight: bold; }
+QPushButton:hover { background-color: #45475a; }
+QPushButton:disabled { background-color: #45475a; color: #a6adc8; }
+QTableWidget { background-color: #181825; color: #cdd6f4; gridline-color: #313244; border: 1px solid #45475a; }
+QHeaderView::section { background-color: #313244; color: #cdd6f4; padding: 4px; border: 1px solid #45475a; }
+QTableWidget::item:selected { background-color: #89b4fa; color: #11111b; }
+QMessageBox { background-color: #1e1e2e; color: #cdd6f4; }
