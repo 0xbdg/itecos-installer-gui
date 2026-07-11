@@ -1,4 +1,3 @@
-from wizard import PAGE_PART_ADVANCED, PAGE_SUMMARY
 from PyQt6.QtWidgets import QWizardPage, QVBoxLayout, QRadioButton, QButtonGroup, QLabel
 
 class PartitionChoicePage(QWizardPage):
@@ -33,6 +32,8 @@ class PartitionChoicePage(QWizardPage):
         self.registerField("part_manual", self.radio_manual)
 
     def nextId(self):
+        from ..wizard import PAGE_SUMMARY, PAGE_PART_ADVANCED
+
         if self.radio_manual.isChecked():
             return PAGE_PART_ADVANCED
         return PAGE_SUMMARY

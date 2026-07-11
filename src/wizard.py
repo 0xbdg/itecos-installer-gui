@@ -1,11 +1,11 @@
 from PyQt6.QtWidgets import QWizard
 
-from .pages.keyboard import KeyboardPage
 from .pages.welcome import WelcomePage
 from .pages.locale import LocalePage
+from .pages.keyboard import KeyboardPage
 from .pages.usersetup import UserSetupPage
 from .pages.partition import PartitionChoicePage
-from .pages.partition_detail import AdvancedPartitionPage
+from .pages.partitiondetail import AdvancedPartitionPage
 
 PAGE_WELCOME = 0
 PAGE_LOCALE = 1

@@ -1,5 +1,3 @@
-from wizard import PAGE_SUMMARY
-
 from PyQt6.QtWidgets import QWizardPage, QVBoxLayout, QDialog, QFormLayout, QLineEdit, QComboBox,QCheckBox, QHBoxLayout, QPushButton, QLabel, QFrame, QTableWidget, QHeaderView, QAbstractItemView, QWidget, QTableWidgetItem, QMessageBox
 from PyQt6.QtCore import Qt
 
@@ -260,4 +258,5 @@ class AdvancedPartitionPage(QWizardPage):
             self.update_visual_layout()
 
     def nextId(self):
+        from ..wizard import PAGE_SUMMARY
         return PAGE_SUMMARY
