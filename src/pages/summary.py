@@ -1,4 +1,3 @@
-from wizard import PAGE_INSTALL
 
 from PyQt6.QtWidgets import QWizardPage, QTextEdit,QVBoxLayout
 
@@ -32,4 +31,5 @@ class SummaryPage(QWizardPage):
         self.summary_text.setHtml(summary)
 
     def nextId(self):
+        from ..wizard import PAGE_INSTALL
         return PAGE_INSTALL
