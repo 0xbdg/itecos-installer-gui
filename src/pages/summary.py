@@ -1,4 +1,3 @@
-
 from PyQt6.QtWidgets import QWizardPage, QTextEdit,QVBoxLayout
 
 class SummaryPage(QWizardPage):
@@ -22,7 +21,7 @@ class SummaryPage(QWizardPage):
         part_mode = "Partisi Manual" if self.field("part_manual") else "Hapus Disk (Otomatis)"
         
         summary = f"""
-        <b>PENGATURAN INSTALASI CUSTOMOS</b><br><br>
+        <b>PENGATURAN INSTALASI ITEC-OS</b><br><br>
         <b>Lokalisasi:</b><br> - Bahasa: {lang}<br> - Zona Waktu: {tz}<br><br>
         <b>Akun Pengguna:</b><br> - Username: {user}<br><br>
         <b>Konfigurasi Disk:</b><br> - Mode: {part_mode}<br><br>

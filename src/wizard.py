@@ -35,4 +35,3 @@ class WizardInstaller(QWizard):
 
         self.resize(500,500)
         self.setStyleSheet(open(assets_folder / "style.qss", "r").read())
-

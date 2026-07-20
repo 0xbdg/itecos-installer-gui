@@ -14,7 +14,9 @@ class LocalePage(QWizardPage):
         
         layout.addRow("Language:", self.lang_combo)
         layout.addRow("Time Zone:", self.tz_combo)
-        self.setLayout(layout)
-        
         self.registerField("language", self.lang_combo, "currentText")
         self.registerField("timezone", self.tz_combo, "currentText")
+        self.setLayout(layout)
+
+    def validatePage(self) ->bool:
+        return True
