@@ -1,4 +1,5 @@
 from PyQt6.QtWidgets import QFormLayout, QComboBox,QWizardPage
+from config import LOCALE, TIMEZONE
 
 class LocalePage(QWizardPage):
     def __init__(self):
@@ -19,4 +20,7 @@ class LocalePage(QWizardPage):
         self.setLayout(layout)
 
     def validatePage(self) ->bool:
+        LOCALE=self.lang_combo.currentText()
+        TIMEZONE=self.tz_combo.currentText()
+
         return True

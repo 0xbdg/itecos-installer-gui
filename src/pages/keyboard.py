@@ -1,4 +1,5 @@
 from PyQt6.QtWidgets import QWizardPage, QVBoxLayout, QLineEdit, QLabel, QComboBox
+from config import KEYMAP, LOCALE, TIMEZONE
 
 class KeyboardPage(QWizardPage):
     def __init__(self):
@@ -13,7 +14,7 @@ class KeyboardPage(QWizardPage):
         self.test_input = QLineEdit()
         self.test_input.setPlaceholderText("Ketik di sini untuk menguji keyboard Anda...")
         
-        layout.addWidget(QLabel("Layout Keyboard:"))
+        layout.addWidget(QLabel(f"Layout Keyboard:"))
         layout.addWidget(self.kb_combo)
         layout.addSpacing(20)
         layout.addWidget(QLabel("Uji Keyboard:"))
@@ -23,5 +24,6 @@ class KeyboardPage(QWizardPage):
         self.registerField("keyboard", self.kb_combo, "currentText")
 
     def validatePage(self) -> bool:
-        
+        KEYMAP = self.kb_combo.currentText()
+
         return True

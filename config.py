@@ -1,0 +1,8 @@
+DISK = ""
+HOSTNAME = ""
+TIMEZONE = ""
+LOCALE = ""
+KEYMAP = ""
+USERNAME = ""
+USER_PASSWORD = ""
+PERCENT = None
