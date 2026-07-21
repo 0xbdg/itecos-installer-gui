@@ -1,15 +1,17 @@
 from PyQt6.QtWidgets import QWizardPage, QVBoxLayout, QLineEdit, QLabel, QComboBox
 from config import KEYMAP, LOCALE, TIMEZONE
+import subprocess
 
 class KeyboardPage(QWizardPage):
     def __init__(self):
         super().__init__()
+        keymaps = subprocess.run(["localectl", "list-keymaps"], stdout=subprocess.PIPE, text=True).stdout.strip().split('\n')
         self.setTitle("Susunan Keyboard")
         self.setSubTitle("Pilih tata letak keyboard yang Anda gunakan.")
         
         layout = QVBoxLayout()
         self.kb_combo = QComboBox()
-        self.kb_combo.addItems(["English (US, Default)", "English (UK)", "Arabic", "Dvorak"])
+        self.kb_combo.addItems([k for k in sorted(keymaps)])
         
         self.test_input = QLineEdit()
         self.test_input.setPlaceholderText("Ketik di sini untuk menguji keyboard Anda...")
