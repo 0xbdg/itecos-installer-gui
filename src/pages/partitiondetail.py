@@ -1,6 +1,8 @@
 from PyQt6.QtWidgets import QWizardPage, QVBoxLayout, QDialog, QFormLayout, QLineEdit, QComboBox,QCheckBox, QHBoxLayout, QPushButton, QLabel, QFrame, QTableWidget, QHeaderView, QAbstractItemView, QWidget, QTableWidgetItem, QMessageBox
 from PyQt6.QtCore import Qt
 
+import subprocess, json
+
 class PartitionDialog(QDialog):
     def __init__(self, parent=None, is_edit=False, current_data=None):
         super().__init__(parent)
@@ -59,6 +61,7 @@ class PartitionDialog(QDialog):
 class AdvancedPartitionPage(QWizardPage):
     def __init__(self):
         super().__init__()
+        device = subprocess.run(["lsblk", "-dn", "-o","PATH"], stdout=subprocess.PIPE, text=True).stdout.strip().split('\n')
         self.setTitle("Partisi Manual")
         self.setSubTitle("Atur titik kait (mount points) dan ukuran partisi.")
         
@@ -68,7 +71,7 @@ class AdvancedPartitionPage(QWizardPage):
         disk_layout = QHBoxLayout()
         disk_layout.addWidget(QLabel("Pilih Penyimpanan:"))
         self.disk_combo = QComboBox()
-        self.disk_combo.addItems(["/dev/nvme0n1 - 512.0 GB", "/dev/sda - 1.0 TB"])
+        self.disk_combo.addItems([p for p in device])
         disk_layout.addWidget(self.disk_combo)
         disk_layout.addStretch()
         main_layout.addLayout(disk_layout)
@@ -103,9 +106,9 @@ class AdvancedPartitionPage(QWizardPage):
         
         # Tombol Aksi
         btn_layout = QHBoxLayout()
-        self.btn_add = QPushButton("+ Tambah")
-        self.btn_edit = QPushButton("✎ Ubah")
-        self.btn_delete = QPushButton("- Hapus")
+        self.btn_add = QPushButton("Tambah")
+        self.btn_edit = QPushButton("Ubah")
+        self.btn_delete = QPushButton("Hapus")
         
         btn_layout.addStretch()
         btn_layout.addWidget(self.btn_add)

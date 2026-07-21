@@ -4,7 +4,7 @@ from PyQt6.QtCore import QTimer
 class InstallProgressPage(QWizardPage):
     def __init__(self):
         super().__init__()
-        self.setTitle("Menginstal CustomOS")
+        self.setTitle("Menginstal ITEC-OS")
         self.setSubTitle("Mohon tunggu, sistem sedang dipasang ke disk Anda...")
         
         layout = QVBoxLayout()

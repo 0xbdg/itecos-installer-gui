@@ -4,7 +4,7 @@ from .pages.install import InstallProgressPage
 from .pages.welcome import WelcomePage
 from .pages.locale import LocalePage
 from .pages.keyboard import KeyboardPage
-from .pages.usersetup import UserSetupPage
+from .pages.account import UserSetupPage
 from .pages.partition import PartitionChoicePage
 from .pages.partitiondetail import AdvancedPartitionPage
 from .pages.summary import SummaryPage
