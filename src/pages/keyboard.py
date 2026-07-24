@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QWizardPage, QVBoxLayout, QLineEdit, QLabel, QComboBox
-from core.config import KEYMAP, LOCALE, TIMEZONE
+from src.core.config import KEYMAP, LOCALE, TIMEZONE
 import subprocess
 
 class KeyboardPage(QWizardPage):

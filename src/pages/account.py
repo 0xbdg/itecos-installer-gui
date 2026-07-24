@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QWizardPage, QFormLayout, QLineEdit
-from config import USER_PASSWORD, USERNAME, HOSTNAME
+from src.core.config import USER_PASSWORD, USERNAME, HOSTNAME
 
 class UserSetupPage(QWizardPage):
     def __init__(self):

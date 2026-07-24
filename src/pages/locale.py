@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QFormLayout, QComboBox,QWizardPage
 from zoneinfo import available_timezones
-from core.config import LOCALE, TIMEZONE
+from src.core.config import LOCALE, TIMEZONE
 
 import subprocess
 
