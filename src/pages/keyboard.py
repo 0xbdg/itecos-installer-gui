@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QWizardPage, QVBoxLayout, QLineEdit, QLabel, QComboBox
-from config import KEYMAP, LOCALE, TIMEZONE
+from core.config import KEYMAP, LOCALE, TIMEZONE
 import subprocess
 
 class KeyboardPage(QWizardPage):
@@ -27,5 +27,5 @@ class KeyboardPage(QWizardPage):
 
     def validatePage(self) -> bool:
         KEYMAP = self.kb_combo.currentText()
-
+        print(LOCALE, TIMEZONE, KEYMAP)
         return True
